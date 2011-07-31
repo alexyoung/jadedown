@@ -1,0 +1,49 @@
+h1 Jadedown
+
+(http://jadedown.com)[Jadedown] is a lightweight markup language based on (http://daringfireball.net/projects/markdown/)[Markdown] and (http://jade-lang.org)[Jade].
+
+h2 Overview
+
+# Tags take the form: `tagName#id.class1.class2(attr1="value", attr2="value 2")[innerHTLM]`
+# If a line starts with a recognised tag, then the line is wrapped in that tag.  For example: `h3 This is a header`
+# If a line starts with `*` or `#` it is a unordered or ordered list
+# There is also shorthand for commonly used tags, like strong, em, links, and code
+
+h2 Jade Influences
+
+In Jade, a tag is written at the start of a line:
+
+<pre>
+h3 This is a header
+</pre>
+
+This has been retained in Jadedown.
+
+Jade uses CSS selectors and brackets to contain attributes:
+
+<pre>
+h3.className(style="color: blue") This is a header
+</pre>
+
+Jadedown uses the same conventions.
+
+h2 Shorthand
+
+* Code can be written with backticks <code>`var a = 1;`</code>
+* Asterisks and underscores are used for bold and italic
+* Other lines are converted to paragraphs
+* Unordered lists start with asterisks
+* Ordered lists start with a hash
+
+h2 Plans
+
+# Inline tags
+# Tags with classes
+# Tags with IDs
+# Full test suite
+# Benchmarks
+
+And this is an image:
+
+img(src="http://example.com/image.png")
+

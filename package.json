@@ -1,0 +1,17 @@
+{ "name": "jadedown"
+, "description": "A lightweight markup language"
+, "version": "0.0.1"
+, "url": "http://github.com/alexyoung/jadedown"
+, "author": "Alex R. Young <alex@helicoid.net>"
+, "engines": ["node >= 0.4.0"]
+, "main": "./lib/jadedown.js"
+, "bin": { "jadedown": "./bin/jadedown" }
+, "devDependencies": {
+    "jison": "0.2.11"
+  , "expresso": "latest"
+  }
+, "repository": {
+    "type" : "git"
+  , "url" : "http://github.com/alexyoung/jadedown.git"
+  }
+}

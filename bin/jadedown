@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+var jadedown = require(__dirname + '/../lib/jadedown')
+  , fs = require('fs');
+
+// TODO: Stream?
+console.log(jadedown(fs.readFileSync(process.argv[2], 'utf8')));

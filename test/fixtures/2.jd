@@ -1,0 +1,13 @@
+h2 Inline (http://example.com)[links] should work in headers
+
+# And *things like bold* should work in lists
+# And _italic_
+# Good job
+
+More:
+
+* And *things like bold* should work in lists
+* And _italic_
+* Again, (http://example.com/2)[links] should work
+
+
