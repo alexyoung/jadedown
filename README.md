@@ -24,7 +24,7 @@ Shorthand:
 
 ## Examples
 
-There are some rough examples I used to developer the basic lexer and parser, which can be found in `test/fixtures/`.
+There are some rough examples I used to develop the basic lexer and parser; these can be found in `test/fixtures/`.
 
 ## Installation
 
@@ -43,7 +43,7 @@ Or as a CommonJS module:
 
 ## License
 
-Copyright (C) <2011> by <Alex R. Young>
+Copyright (C) 2011 by Alex R. Young
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
