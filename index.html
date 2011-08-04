@@ -4,13 +4,21 @@
   <meta charset='utf-8'>
 
   <title>alexyoung/jadedown @ GitHub</title>
-
+  <script src="https://raw.github.com/alexyoung/jadedown/master/jadedown.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+  $('#test').submit(function(e) {
+    e.preventDefault();
+    $('#output').html(jadedown($('#source').val()));
+  });
+  $('#output').html(jadedown($('#source').val()));
+});
+  </script>
   <style type="text/css">
     body {
       margin-top: 1.0em;
-      background-color: #206d1c;
       font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
     }
     #container {
       margin: 0 auto;
@@ -27,6 +35,10 @@
     pre { background: #000; color: #fff; padding: 15px;}
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
+
+    #output, textarea { width: 300px; height: 300px; float: left }
+    #output { border: 1px solid gray; margin-right: 10px }
+    form div { clear: both }
   </style>
 </head>
 
@@ -49,11 +61,12 @@
       Combining Jade and Markdown
     </div>
 
-    <h2>Authors</h2>
-<p>Alex Young (alex@helicoid.net)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Alex Young (alex@helicoid.net)<br/>      </p>
-
+    <h2>Try It</h2>
+    <div id="output"></div>
+    <form id="test">
+      <textarea name="source" id="source"></textarea>
+      <div><input type="submit" value="Parse" /></div>
+    </form>
 
     <h2>Download</h2>
     <p>
