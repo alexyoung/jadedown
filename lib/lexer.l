@@ -118,7 +118,7 @@
 
 <preblock>^[^\s] %{
   yy.lexer.unput(yytext);
-  yytext = '</code></pre>\n';
+  yy.c('\n</code></pre>');
   this.popState();
 %}
 

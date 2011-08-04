@@ -9,6 +9,12 @@ module.exports = {
     assert.equal(expected, jadedown(input));
   },
 
+  'test HTML is escaped in multiline pre tags': function() {
+    var expected = '<p>Example:</p>\n<pre>\nThis is a &lt;tag&gt;\n</pre>'
+      , input = 'Example:\n<pre>\nThis is a <tag>\n</pre>';
+    assert.equal(expected, jadedown(input));
+  },
+
   'test HTML is escaped in code tags': function() {
     // I'm not sure if this should insert paragraphs or not
     var expected = '<code>This is a &lt;tag&gt;</code>'

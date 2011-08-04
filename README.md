@@ -29,7 +29,16 @@ There are some rough examples I used to develop the basic lexer and parser; thes
 
 ## Installation
 
+As an npm module:
+
     npm install -g jadedown
+
+There's also a browser version in jadedown.js.
+
+    <script src="jadedown.js"></script>
+    <script>
+      jadedown('*Example*');
+    </script>
 
 ## Usage
 

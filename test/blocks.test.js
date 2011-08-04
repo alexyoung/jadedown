@@ -38,6 +38,13 @@ module.exports = {
     assert.equal(expected, jadedown(input));
   },
 
+  'test indented code tags are closed correctly': function() {
+    var expected = '<p>Here is some code:</p>\n<pre><code>var a = 1;    a++;    console.log(a);\n</code></pre>\n<p>Example.</p>'
+      , input = 'Here is some code:\n    var a = 1;    a++;    console.log(a);\nExample.\n';
+
+    assert.equal(expected, jadedown(input));
+  },
+
   'test tab indentation becomes code': function() {
     var expected = '<p>Here is some code:</p>\n<pre><code>var a = 1;</code></pre>\n'
       , input = 'Here is some code:\n\tvar a = 1;\n';
