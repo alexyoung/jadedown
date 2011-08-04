@@ -36,8 +36,9 @@ $(function() {
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
 
-    #output, textarea { width: 300px; height: 300px; float: left }
-    #output { border: 1px solid gray; margin-right: 10px }
+    #output, textarea { width: 330px; height: 300px; float: left; }
+    #output { border: 1px solid gray; margin-right: 10px; overflow: auto; padding: 0 10px }
+    #output h3 { text-align: left }
     form div { clear: both }
   </style>
 </head>
@@ -64,7 +65,32 @@ $(function() {
     <h2>Try It</h2>
     <div id="output"></div>
     <form id="test">
-      <textarea name="source" id="source"></textarea>
+      <textarea name="source" id="source">
+h2 Jadedown
+
+* Easy to learn
+* Easy to write
+* Based on Markdown and Jade
+
+For more on Jade, see (http://jade-lang.org)[jade-lang.org].
+
+h3 Code
+
+Code can be indented with backticks: `var a = 1;`
+
+Or through indentation:
+
+    var a = 1;
+    function() {}
+
+h3 Tags
+
+Jadedown uses CSS selectors and brackets to contain attributes:
+
+<pre>
+h3.className(style="color: blue") This is a header
+</pre>
+      </textarea>
       <div><input type="submit" value="Parse" /></div>
     </form>
 
