@@ -2,4 +2,5 @@
 * Decide how to manage paragraph insertion
 * Remove list tags from lexer and use Nodes
 * Make parser able to always close open tags
+* Parse/preserve Windows line endings
 

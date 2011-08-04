@@ -15,8 +15,35 @@ module.exports = {
       , input = 'blockquote This is a _quote_\n';
 
     assert.equal(expected, jadedown(input));
+  },
+
+  'test space indentation becomes code': function() {
+    var expected = '<p>Here is some code:</p>\n<pre><code>var a = 1;</code></pre>\n'
+      , input = 'Here is some code:\n    var a = 1;\n';
+
+    assert.equal(expected, jadedown(input));
+  },
+
+  'test extra space indentation becomes code': function() {
+    var expected = '<p>Here is some code:</p>\n<pre><code>var a = 1;</code></pre>\n'
+      , input = 'Here is some code:\n      var a = 1;\n';
+
+    assert.equal(expected, jadedown(input));
+  },
+
+  'test multiple lines of code': function() {
+    var expected = '<p>Here is some code:</p>\n<pre><code>var a = 1;\nfunction() { return a * 100; }</code></pre>\n'
+      , input = 'Here is some code:\n      var a = 1;\n    function() { return a * 100; }\n';
+
+    assert.equal(expected, jadedown(input));
+  },
+
+  'test tab indentation becomes code': function() {
+    var expected = '<p>Here is some code:</p>\n<pre><code>var a = 1;</code></pre>\n'
+      , input = 'Here is some code:\n\tvar a = 1;\n';
+
+    assert.equal(expected, jadedown(input));
   }
 
   // TODO: Blocks with IDs, classes, etc.
 };
-

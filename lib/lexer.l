@@ -1,6 +1,7 @@
 %x b
 %x p
 %x pre
+%x preblock
 %x li
 %x ol
 
@@ -93,6 +94,32 @@
   } else {
     return 'TEXT';
   }
+%}
+
+^(\t|" "{4,})(.*) %{
+  yytext = '<pre><code>' + yy.h(yy.lexer.matches[2])
+  this.begin('preblock');
+  return 'TEXT';
+%}
+
+<preblock>\n+ %{
+  return 'EOL';
+%}
+
+<preblock><<EOF>> %{
+  yytext = '</code></pre>\n';
+  return 'EOF';
+%}
+
+<preblock>^(\t|" "{4,})(.*) %{
+  yytext = yy.h(yy.lexer.matches[2])
+  return 'TEXT';
+%}
+
+<preblock>^[^\s] %{
+  yy.lexer.unput(yytext);
+  yytext = '</code></pre>\n';
+  this.popState();
 %}
 
 ^("h"[1-6]|"bq"|"blockquote")\s+ %{

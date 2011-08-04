@@ -17,6 +17,7 @@ Basic principles:
 Shorthand:
 
 * Code can be written with backticks: `var a = 1;`
+* Code blocks can be created by using four spaces or a tab at the start of each line
 * Asterisks and underscores are used for bold and italic
 * Other lines are converted to paragraphs
 * Unordered lists start with asterisks

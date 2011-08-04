@@ -1,6 +1,6 @@
 { "name": "jadedown"
 , "description": "A lightweight markup language"
-, "version": "0.0.1"
+, "version": "0.0.2"
 , "url": "http://github.com/alexyoung/jadedown"
 , "author": "Alex R. Young <alex@helicoid.net>"
 , "engines": ["node >= 0.4.0"]
